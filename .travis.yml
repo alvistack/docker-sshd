@@ -25,13 +25,12 @@ install:
 
 script:
   - |
-    set -ex
-    source ./scripts/run-tests.sh
-    sudo -E molecule dependency -s $MOLECULE_SCENARIO_NAME
-    sudo -E molecule lint -s $MOLECULE_SCENARIO_NAME
-    sudo -E molecule syntax -s $MOLECULE_SCENARIO_NAME
-    sudo -E molecule converge -s $MOLECULE_SCENARIO_NAME
-    sudo -E molecule verify -s $MOLECULE_SCENARIO_NAME
+    source ./scripts/run-tests.sh \
+      && sudo -E molecule dependency -s $MOLECULE_SCENARIO_NAME \
+      && sudo -E molecule lint -s $MOLECULE_SCENARIO_NAME \
+      && sudo -E molecule syntax -s $MOLECULE_SCENARIO_NAME \
+      && sudo -E molecule converge -s $MOLECULE_SCENARIO_NAME \
+      && sudo -E molecule verify -s $MOLECULE_SCENARIO_NAME
 
 after_success:
   - |
