@@ -11,7 +11,7 @@ Learn more about OpenSSH: <https://www.openssh.com/>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-  - [`7.6.1`, `latest` (molecule/7.6.1/Dockerfile.j2)](https://github.com/alvistack/docker-sshd/blob/master/molecule/7.6.1/Dockerfile.j2)
+  - [`7.6`, `latest` (molecule/7.6/Dockerfile.j2)](https://github.com/alvistack/docker-sshd/blob/master/molecule/7.6/Dockerfile.j2)
 
 ## Overview
 
