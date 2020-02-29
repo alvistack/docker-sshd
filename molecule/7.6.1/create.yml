@@ -90,8 +90,8 @@
         state: started
         recreate: false
         log_driver: json-file
-        entrypoint: "{{ item.entrypoint | default('bash') }}"
-        command: "{{ item.command | default('-c \"sleep infinity\"') }}"
+        entrypoint: "{{ item.entrypoint | default('') }}"
+        command: "{{ item.command | default('bash -c \"sleep infinity\"') }}"
         user: "{{ item.user | default(omit) }}"
         pid_mode: "{{ item.pid_mode | default(omit) }}"
         privileged: "{{ item.privileged | default(omit) }}"
