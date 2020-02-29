@@ -36,5 +36,3 @@
       loop_control:
         index_var: index
       with_items: "{{ molecule_yml.platforms }}"
-      changed_when: false
-      ignore_errors: true
