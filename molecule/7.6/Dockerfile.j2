@@ -19,6 +19,13 @@ ENV LC_ALL "en_US.utf8"
 ENV SHELL  "/bin/bash"
 ENV TZ     "UTC"
 
+# Hotfix for en_US.utf8 locale
+RUN set -ex \
+    && apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y locales \
+    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
+    && rm -rf /var/lib/apt/lists/*
+
 VOLUME  "/root"
 WORKDIR "/root"
 
@@ -26,10 +33,3 @@ EXPOSE 22
 
 ENTRYPOINT [ "tini", "-g", "--", "docker-entrypoint.sh" ]
 CMD        [ "/usr/sbin/sshd", "-eD" ]
-
-# Hotfix for en_US.utf8 locale
-RUN set -ex \
-    && apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y locales \
-    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
-    && rm -rf /var/lib/apt/lists/*
