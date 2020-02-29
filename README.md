@@ -11,8 +11,7 @@ Learn more about OpenSSH: <https://www.openssh.com/>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-  - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-sshd/blob/master/Dockerfile)
-  - [`7.6` (7.6/Dockerfile)](https://github.com/alvistack/docker-sshd/blob/7.6/Dockerfile)
+  - [`7.6.1`, `latest` (molecule/7.6.1/Dockerfile.j2)](https://github.com/alvistack/docker-sshd/blob/master/molecule/7.6.1/Dockerfile.j2)
 
 ## Overview
 
@@ -20,7 +19,8 @@ This Docker container makes it easy to get an instance of SSHD up and running wi
 
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
-  - Self initialize with Ansible, by dogfooding with Ansible Playbook
+  - Minimized `Dockerfile` for meta data changes
+  - Provision by Ansible and Molecule Docker driver
   - Handle `ENTRYPOINT` with [tini](https://github.com/krallin/tini)
   - Handle `CMD` with SSHD
 
