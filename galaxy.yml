@@ -14,19 +14,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- hosts: all
-  remote_user: root
-  roles:
-    - role: bootstrap
-    - role: locales
-    - role: timezone
-    - role: python
-    - role: ansible
-    - role: tini
-    - role: gosu
+namespace: alvistack
+name: docker-sshd
+description: Docker Image Packaging for OpenSSH Server
 
-- hosts: all
-  remote_user: root
-  roles:
-    - role: sshd
-    - role: localhost
+version: MAJOR.MINOR.PATCH
+readme: README.md
+license: Apache-2.0
+
+repository: https://github.com/alvistack/docker-sshd
+documentation: https://github.com/alvistack/docker-sshd
+homepage: https://github.com/alvistack/docker-sshd
+issues: https://github.com/alvistack/docker-sshd/issues
+
+dependencies: {}
+tags:
+  - system
+authors:
+  - Wong Hoi Sing Edison <hswong3i@pantarei-design.com>

@@ -16,16 +16,17 @@
 
 - hosts: all
   remote_user: root
-  become: true
-  tasks:
-    - name: prepare files
-      file:
-        dest: "{{ item.dest }}"
-        owner: "{{ item.owner | default('root') }}"
-        group: "{{ item.group | default('root') }}"
-        mode: "{{ item.mode | default('0644') }}"
-        state: "{{ item.state | default('file') }}"
-      loop:
-        - { dest: "/usr/local/bin/docker-entrypoint.sh", mode: "0755" }
-        - { dest: "/usr/local/bin/gosu", mode: "0755" }
-        - { dest: "/usr/local/bin/tini", mode: "0755" }
+  pre_tasks:
+    - include_tasks: "./tasks/pre_tasks.yml"
+
+  roles:
+    - role: bootstrap
+    - role: python
+    - role: locales
+    - role: timezone
+    - role: tini
+    - role: gosu
+    - role: sshd
+
+  post_tasks:
+    - include_tasks: "./tasks/post_tasks.yml"

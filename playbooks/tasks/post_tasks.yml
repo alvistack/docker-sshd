@@ -14,11 +14,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: apt-get install
-  apt:
-    name: "{{ item.name }}"
-    state: "{{ item.state }}"
-  loop: "{{ _apt }}"
-  register: result
-  until: result is succeeded
-  tags: localhost
+- name: prepare files
+  file:
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0644') }}"
+    state: "{{ item.state | default('file') }}"
+  loop:
+    - { dest: "/usr/local/bin/docker-entrypoint.sh", mode: "0755" }
+    - { dest: "/usr/local/bin/gosu", mode: "0755" }
+    - { dest: "/usr/local/bin/tini", mode: "0755" }
+
+- name: flush cache
+  shell: |
+    set -o pipefail
+    rm -rf /var/lib/apt/lists/*
+  args:
+    executable: "/bin/bash"
+  changed_when: false
+  ignore_errors: true
