@@ -1,6 +1,6 @@
 # Docker Image Packaging for OpenSSH Server
 
-[![Travis](https://img.shields.io/travis/alvistack/docker-sshd.svg)](https://travis-ci.org/alvistack/docker-sshd)
+[![Travis](https://img.shields.io/travis/com/alvistack/docker-sshd.svg)](https://travis-ci.com/alvistack/docker-sshd)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-sshd.svg)](https://github.com/alvistack/docker-sshd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-sshd.svg)](https://github.com/alvistack/docker-sshd/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/sshd.svg)](https://hub.docker.com/r/alvistack/sshd/)
@@ -65,7 +65,7 @@ The `latest` tag matches the most recent [GitHub Release](https://github.com/alv
 
 ### `alvistack/sshd:<version>`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.org/alvistack/docker-sshd) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-sshd) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
