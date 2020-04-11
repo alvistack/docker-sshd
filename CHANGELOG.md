@@ -9,7 +9,7 @@
 ### Major Changes
 
   - Provision with systemd support
-  
+
 ## 7.6.1-4alvistack4 - 2020-03-05
 
 ### Major Changes
