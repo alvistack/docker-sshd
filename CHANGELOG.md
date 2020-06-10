@@ -1,6 +1,10 @@
 # Docker Image Packaging for OpenSSH Server
 
-## 7.6.1-XalvistackY - TBC
+## 8.2.1-XalvistackY - TBC
+
+### Major Changes
+
+## 8.2.1-4alvistack7 - 2020-06-10
 
 ### Major Changes
 
