@@ -11,7 +11,7 @@ Learn more about OpenSSH: <https://www.openssh.com/>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-  - [`8.2`, `latest`](https://github.com/alvistack/docker-sshd/blob/master/molecule/8.2/Dockerfile.j2)
+  - [`8.2`, `latest`](https://github.com/alvistack/docker-sshd/blob/master/packer/8.2/packer.json)
 
 ## Overview
 
@@ -19,8 +19,7 @@ This Docker container makes it easy to get an instance of SSHD up and running wi
 
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
-  - Minimized `Dockerfile` for meta data definition
-  - Provision by Ansible and Molecule Docker driver in single layer
+  - Packaging by Packer Docker builder and Ansible provisioner in single layer
   - Handle `ENTRYPOINT` with [catatonit](https://github.com/openSUSE/catatonit)
   - Handle `CMD` with SSHD
 
