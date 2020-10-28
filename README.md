@@ -9,7 +9,7 @@ OpenSSH is the premier connectivity tool for remote login with the SSH protocol.
 
 Learn more about OpenSSH: <https://www.openssh.com/>
 
-## Supported Tags and Respective `Dockerfile` Links
+## Supported Tags and Respective Packer Template Links
 
   - [`8.2`, `latest`](https://github.com/alvistack/docker-sshd/blob/master/packer/8.2/packer.json)
 
