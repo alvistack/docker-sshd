@@ -11,7 +11,7 @@ Learn more about OpenSSH: <https://www.openssh.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`8.2`, `latest`](https://github.com/alvistack/docker-sshd/blob/master/packer/8.2/packer.json)
+  - [`8.2`, `latest`](https://github.com/alvistack/docker-sshd/blob/master/packer/docker-8.2/packer.json)
 
 ## Overview
 
