@@ -1,6 +1,6 @@
 # Docker Image Packaging for OpenSSH Server
 
-[![Travis](https://img.shields.io/travis/com/alvistack/docker-sshd.svg)](https://travis-ci.com/alvistack/docker-sshd)
+[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-sshd/master)](https://gitlab.com/alvistack/docker-sshd/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-sshd.svg)](https://github.com/alvistack/docker-sshd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-sshd.svg)](https://github.com/alvistack/docker-sshd/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/sshd.svg)](https://hub.docker.com/r/alvistack/sshd/)
