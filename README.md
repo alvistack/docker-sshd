@@ -1,9 +1,9 @@
 # Docker Image Packaging for OpenSSH Server
 
-[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-sshd/master)](https://gitlab.com/alvistack/docker-sshd/-/pipelines)
+[![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-sshd/master)](https://gitlab.com/alvistack/docker-sshd/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-sshd.svg)](https://github.com/alvistack/docker-sshd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-sshd.svg)](https://github.com/alvistack/docker-sshd/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/sshd.svg)](https://hub.docker.com/r/alvistack/sshd/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/sshd-8.2.svg)](https://hub.docker.com/r/alvistack/sshd-8.2)
 
 OpenSSH is the premier connectivity tool for remote login with the SSH protocol.
 
@@ -11,7 +11,8 @@ Learn more about OpenSSH: <https://www.openssh.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`8.2`, `latest`](https://github.com/alvistack/docker-sshd/blob/master/packer/docker-8.2/packer.json)
+  - [`alvistack/sshd-8.2`](https://hub.docker.com/r/alvistack/sshd-8.2)
+      - [`packer/docker-8.2/packer.json`](https://github.com/alvistack/docker-sshd/blob/master/packer/docker-8.2/packer.json)
 
 ## Overview
 
@@ -58,13 +59,13 @@ Now you could SSH to it as normal:
 
 ## Versioning
 
-### `alvistack/sshd:latest`
+### `YYYYMMDD.Y.Z`
 
-The `latest` tag matches the most recent [GitHub Release](https://github.com/alvistack/docker-sshd/releases) of this repository. Thus using `alvistack/sshd:latest` or `alvistack/sshd` will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-sshd/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
-### `alvistack/sshd:<version>`
+### `YYYYMMDD.0.0`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-sshd) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](https://gitlab.com/alvistack/docker-sshd/-/pipelines) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
