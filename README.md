@@ -29,14 +29,14 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 Start SSHD:
 
     # Pull latest image
-    docker pull alvistack/sshd
+    docker pull alvistack/sshd-8.2
     
     # Run as detach
     docker run \
         -itd \
         --name sshd \
         --publish 2222:22 \
-        alvistack/sshd
+        alvistack/sshd-8.2
 
 **Success**. SSHD is now available on port `2222`.
 
